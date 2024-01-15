@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700");
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+  background: #f4f4f4
+
+}
+.contenedor{
+  display: flex;
+}
+/* Menú Lateral */
+
+.lateral{
+  position: relative;
+  top: 0;
+  bottom: 0;
+  min-height:100vh;
+  left: 0;
+  background: #fff;
+  overflow:visible;
+  width: 225px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+.logo1{
+ background-color: #3D238E;
+ text-align: center;
+ border-radius: 5%;
+ width:55%;
+ height: 80px;
+ margin: 0 auto;
+ margin-top: 10px;
+ margin-bottom: 10px;
+}
+.logo1 img{
+  width: 60px;
+  height: 80px;
+  object-fit: cover;
+}
+
+a{
+  position: relative;
+  color: rgb(85, 83, 83);
+  font-size: 16px;
+  display: table;
+  width: 280px;
+  padding: 10px;
+}
+nav .fas{
+  position: relative;
+  width: 70px;
+  height: 40px;
+  top: 14px;
+  font-size: 20px;
+  text-align: center;
+}
+.nav-item{
+  position: relative;
+  top: 12px;
+  margin-left: 10px;
+}
+a:hover{
+  color: #197BBD;
+  background: #f4f4f4;
+  width: 225px;
+}
+.logout{
+  top: 60px;;
+  bottom: 0;
+}
+
+/* Main Section */
+.main{
+  position: relative;
+  padding: 20px;
+  width: 100%;
+}
+.encabezado{
+  display:flex;
+}
+.encabezado h1{
+  font-size: 50px;
+}
+.encabezado i{
+  position: absolute;
+  right: 0;
+  margin: 15px 30px;
+  color: rgb(110, 109, 109);
+  cursor: pointer;
+}
+.encabezado h2{
+  font-size: 100%;
+  position: absolute;
+  right: 20px;
+  margin: 15px 50px;
+  color: rgb(110, 109, 109);
+}
+
+/* Courses */
+.menu_eventos{
+  margin-top:2px;
+  text-transform: capitalize;
+}
+.T2{
+  margin-left: 5%;
+}
+.course-box{
+  width: 90%;
+  height: 380px;
+  padding: 10px 10px 30px 10px;
+  margin: 1% 5% 5% 5%;
+  background-color: #FFF;
+  border-radius: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+.course-box ul{
+  list-style: none;
+  display: flex;
+}
+.course-box ul li{
+  margin: 10px;
+  color: gray;
+  cursor: pointer;
+}
+.course-box ul .active{
+  color: #000;
+  border-bottom: 1px solid #F0AB08;;
+}
+
+
+.form {
+  width: 55%;
+  margin-left: 5%;
+  margin-top: 5%;
+  max-width: 600px;
+  justify-content: center;
+  display: flex;
+
+}
+/* BUSQUEDA */
+.form input {
+  width: 90%;
+  height: 50px;
+  background: #FFFFFF;        
+  border-radius: 10px;
+  border: 1px solid #3D238E;
+  color: rgb(85, 83, 83);
+  font-family: sans-serif;
+  font-size: 18px;
+  line-height: 10px;
+}
+input{
+  text-indent: 2px;
+}
+.icono{
+  width: 100%;
+  display: flex;
+}
+.email{
+  color: #B8B8B8;
+  margin-left: -32px;
+  margin-top: 7px;
+}
+
+.boton2{
+  width: 20%;
+  height: 50px;
+  background-color: #F0AB08;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  color: #FFF;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 122.187%;
+}
+.boton2:hover {
+  background-color:#ba870f;
+}
+.boton2:active {
+  background-color: #F0AB08;
+}
+
+/* HOSPEDAJE*/
+.menuHospedajes{
+  display: block;
+}
+.contHospedaje{
+  background: #fff;
+  text-align: center;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  width:  90%;
+  margin-left:5%;
+  margin-right: 5%;
+  margin-top: 10px;
+  border-radius: 20px;
+  display:flex;
+  
+}
+.contHospedaje .fotoHospedaje{
+  float: left;
+  width: 30%;
+
+}
+.fotoHospedaje  img {
+  border-radius: 10px;
+  width: 320px;
+  height: 230;
+  object-fit: cover;
+}
+.contHospedaje .info_hotel{
+    width: 55%;
+ 
+}
+.contHospedaje .info_hotel h1,p{
+  margin-left: 4px;
+  margin-right: 4px;
+  font-size: 85%; 
+  text-align: justify;
+  text-transform: capitalize;
+
+
+}
+.contHospedaje .estado{
+  width: 15%;
+
+}
+.contHospedaje .estado p,h4{
+font-size: 80%;
+text-align: justify;
+margin-left: 5px;
+
+}
+.estado h4{
+  color: #008000;
+}
+
+.tipos{
+  margin-left: 5%;
+}
+#T1{
+  margin-left: 5%;
+  margin-top: 2%;
+}

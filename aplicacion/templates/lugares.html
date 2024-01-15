@@ -1,0 +1,110 @@
+<span style="font-family: verdana, geneva, sans-serif;">
+  
+  <!DOCTYPE html>  
+   <html lang="es">
+   <head>
+     {% load static %}
+     <meta charset="UTF-8" />
+     <title>Lugares</title>
+     <link rel="stylesheet" type="text/css" href="{% static '../static/css/dashboard.css' %}">
+     <!-- Font Awesome Cdn Link -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+     
+     
+   </head>
+   <body>
+     <div class="contenedor">
+       <nav class="lateral">
+         <ul>
+           <div class="logo1">
+               <img src="{% static 'img/logo1.png' %}" alt="">   
+               
+           </div>
+           <li><a href="{% url 'eventos' %}">
+             <i class="fas fa-drum"></i>
+             <span class="nav-item">Eventos</span>
+           </a></li>
+           <li><a href="{% url 'hospedaje' %}">
+             <i class="fas fa-hotel"></i>
+             <span class="nav-item">Hospedaje</span>
+           </a></li>
+           <li><a href="{% url 'lugares' %}">
+             <i class="fas fa-image"></i>
+             <span class="nav-item">Lugares</span>
+           </a></li>
+           <li><a href="">
+             <i class="fas fa-street-view"></i>
+             <span class="nav-item">Rutas</span>
+           </a></li>
+           <li><a href="">
+             <i class="fas fa-wine-bottle"></i>
+             <span class="nav-item">Bar Disco</span>
+           </a></li>
+           <li><a href="">
+             <i class="fas fa-utensils"></i>
+             <span class="nav-item">Gastronomia</span>
+           </a></li>
+           <li><a href="">
+             <i class="fas fa-cart-plus"></i>
+             <span class="nav-item">Shopping</span>
+           </a></li>
+           <li><a href="{% url 'logout' %}" class="logout">
+             <i class="fas fa-sign-out-alt"></i>
+             <span class="nav-item">Log out</span>
+           </a></li>
+         </ul>
+       </nav>
+   
+       <section class="main">
+         
+         <div class="encabezado">
+             <h1>LUGARES</h1>
+             <h2 class="text-ligth">{{user.username | upper}} BIENVENIDO A VIVA CITY</h2>
+             <i class="fas fa-user-cog"></i>
+           </div>
+ 
+           <form action="" method="POST" class="form">
+            {% csrf_token %}
+            <div class="icono">
+                <input   placeholder="Selecciona la ciudad" type="password" name="password2" id="password2"/>
+
+                <svg version="1.1"  xmlns="http://www.w3.org/2000/svg" class="email" width="30" height="30" viewBox="0 0 612.08 612.08">              
+                  <path d="M237.927,0C106.555,0,0.035,106.52,0.035,237.893c0,131.373,106.52,237.893,237.893,237.893
+                    c50.518,0,97.368-15.757,135.879-42.597l0.028-0.028l176.432,176.433c3.274,3.274,8.48,3.358,11.839,0l47.551-47.551
+                    c3.274-3.274,3.106-8.703-0.028-11.838L433.223,373.8c26.84-38.539,42.597-85.39,42.597-135.907C475.82,106.52,369.3,0,237.927,0z
+                    M237.927,419.811c-100.475,0-181.918-81.443-181.918-181.918S137.453,55.975,237.927,55.975s181.918,81.443,181.918,181.918
+                    S338.402,419.811,237.927,419.811z" fill="#B8B8B8"/>
+                </svg>
+            </div>
+            <button class="boton2" type="submit">Buscar</button>
+          </form>
+ 
+           <section class="menuHospedajes">
+            <div class="tipos">
+              <h1 >Lugares</h1>
+            </div>
+
+            <div class="contHospedaje">
+              <div class="fotoHospedaje">
+                <img src="{% static 'img/hotelCarrion.jpg' %}" alt="" width="250px" height="250px">  
+              </div>
+              <div class="info_hotel">
+                <h1 class="nomhospedaje">NOMBRE LUGAR</h1>
+                <p>Es un hotel que brinda los servicios, piscina, gimnasio, entre muchas otros beneficios</p><br>
+
+                <h1 class="nomhospedaje">DATOS INFORMATIVOS</h1>  
+                <p><img src="{% static 'img/icono3.png' %}" alt="" style="width: 15px;"> Av. Salvador Bustamante Celi entre Daniel Armijos y Francisco Lecaro</p>
+                <p><img src="{% static 'img/icono1.png' %}" alt="" style="width: 15px;">Horario</p>
+              </div>       
+              <div class="estado"> 
+                <p>ESTADO</p>
+                <h4 >ABIERTO</h4>
+              </div>       
+            </div>    
+ 
+          </section>
+ 
+       </section>
+     </div>
+   </body>
+   </html></span>
