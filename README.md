@@ -6,6 +6,7 @@ Instalación
    
 4.Instalar django
    C:\Users\Usuario> pip install Django==4.2.7
+   
 5.
    C:\Users\Usuario>python
 6.    
