@@ -13,6 +13,7 @@
     
   </head>
   <body>
+
     <div class="contenedor">
       <nav class="lateral">
         <ul>
@@ -62,22 +63,98 @@
             <h2 class="text-ligth">{{user.username | upper}} BIENVENIDO A VIVA CITY</h2>
             <i class="fas fa-user-cog"></i>
           </div>
+            
 
-          <form action="" method="POST" class="form">
+          <div class="users">
+            <div class="card">
+              <img src="{% static 'img/hotelCarrion.jpg' %}">
+              <h4>Loja</h4>
+              <p>Ui designer</p>
+              <div class="per">
+                <table>
+                  <tr>
+                    <td><span>85%</span></td>
+                    <td><span>87%</span></td>
+                  </tr>
+                  <tr>
+                    <td>Month</td>
+                    <td>Year</td>
+                  </tr>
+                </table>
+              </div>
+              <button>Profile</button>
+            </div>
+            <div class="card">
+              <img src="{% static 'img/hotelCarrion.jpg' %}">
+              <h4>Vilcabamba</h4>
+              <p>Progammer</p>
+              <div class="per">
+                <table>
+                  <tr>
+                    <td><span>82%</span></td>
+                    <td><span>85%</span></td>
+                  </tr>
+                  <tr>
+                    <td>Month</td>
+                    <td>Year</td>
+                  </tr>
+                </table>
+              </div>
+              <button>Profile</button>
+            </div>
+            <div class="card">
+              <img src="{% static 'img/hotelCarrion.jpg' %}">
+              <h4>Catamayo</h4>
+              <p>tester</p>
+              <div class="per">
+                <table>
+                  <tr>
+                    <td><span>94%</span></td>
+                    <td><span>92%</span></td>
+                  </tr>
+                  <tr>
+                    <td>Month</td>
+                    <td>Year</td>
+                  </tr>
+                </table>
+              </div>
+              <button>Profile</button>
+            </div>
+            <div class="card">
+              <img src="{% static 'img/hotelCarrion.jpg' %}">
+              <h4>Salina micheal</h4>
+              <p>Ui designer</p>
+              <div class="per">
+                <table>
+                  <tr>
+                    <td><span>85%</span></td>
+                    <td><span>82%</span></td>
+                  </tr>
+                  <tr>
+                    <td>Month</td>
+                    <td>Year</td>
+                  </tr>
+                </table>
+              </div>
+              <button>Profile</button>
+            </div>
+          </div>
+
+
+          <form action="/listarEventos/" method="POST" class="form">
             {% csrf_token %}
             <div class="icono">
-                <input   placeholder="Selecciona la ciudad" type="password" name="password2" id="password2"/>
-
-                <svg version="1.1"  xmlns="http://www.w3.org/2000/svg" class="email" width="30" height="30" viewBox="0 0 612.08 612.08">              
-                  <path d="M237.927,0C106.555,0,0.035,106.52,0.035,237.893c0,131.373,106.52,237.893,237.893,237.893
-                    c50.518,0,97.368-15.757,135.879-42.597l0.028-0.028l176.432,176.433c3.274,3.274,8.48,3.358,11.839,0l47.551-47.551
-                    c3.274-3.274,3.106-8.703-0.028-11.838L433.223,373.8c26.84-38.539,42.597-85.39,42.597-135.907C475.82,106.52,369.3,0,237.927,0z
-                    M237.927,419.811c-100.475,0-181.918-81.443-181.918-181.918S137.453,55.975,237.927,55.975s181.918,81.443,181.918,181.918
-                    S338.402,419.811,237.927,419.811z" fill="#B8B8B8"/>
-                </svg>
+                <select name="opcion">
+                  <option value="opcion1">Opción 1</option>
+                  <option value="opcion2">Opción 2</option>
+                  <option value="opcion3">Opción 3</option>
+              </select>
+              
             </div>
-            <button class="boton2" type="submit">Buscar</button>
+            <input class="boton2" type="submit" value="Buscar" placeholder="Buscar ciudad">
           </form>
+
+          
           <section class="menuHospedajes">
             <div class="tipos">
               <h1 >Hoteles</h1>

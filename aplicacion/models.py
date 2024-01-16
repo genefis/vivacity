@@ -1,8 +1,4 @@
 from django.db import models
-
-# Create your models here.
-from django.db import models
-
 # Create your models here.
 class canton(models.Model):
     id= models.BigAutoField(auto_created=True, primary_key=True, serialize=False)

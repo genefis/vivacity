@@ -17,7 +17,10 @@ urlpatterns = [
     path('hospedaje/',login_required(views.hospedaje),name='hospedaje'),
     path('lugares/',login_required(views.lugares),name='lugares'),
     path('logout/',logout_then_login,name='logout'),
-    path('salir/',views.salir,name='salir')
+    path('salir/',views.salir,name='salir'),
+    path('listarCanton/',views.listarCanton,name='listarCanton'),
+    path('listarEventosPorCanton/',views.listarEventosPorCanton,name='listarEventosPorCanton')
+
 
 ]
          

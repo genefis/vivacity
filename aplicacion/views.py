@@ -1,16 +1,15 @@
 from django.shortcuts import render
-
-# Create your views here.
-from django.shortcuts import render
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect, get_object_or_404
+from django.db.models import Q
+
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.models import User
 from django.db import IntegrityError
-from django.utils import timezone
 from django.contrib.auth.decorators import login_required
-
+from.models import eventos
+from.models import canton
 
 
 def index(request):
@@ -76,3 +75,14 @@ def lugares(request):
 
 def salir(request):
     return render(request,'salir.html')
+
+
+def listarCanton(request):
+    busqueda = request.GET.get("buscar")
+    cantones = canton.objects.all()
+
+    if busqueda:
+        cantones = canton.objects.filter(
+            Q(nombre_canton__icontains = busqueda) 
+        ).distinct()
+    return render(request,"eventos.html",{"cantones":cantones})
