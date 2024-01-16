@@ -7,6 +7,6 @@ Instalación
 5.
    C:\Users\Usuario>python
 6.    
-   >>> import django
+   import django
 7. 
    decargar este proyecto y abrirlo con visual studio code
